@@ -25,50 +25,52 @@ export default function ProdutosScreen({ navigation }) {
         <Appbar.Content title="Cadastro de Produto" titleStyle={styles.title} />
       </Appbar.Header>
       <View style={styles.container}>
-        <TextInput
-          label="ID"
-          value={id}
-          onChangeText={text => setId(text)}
-          style={styles.input}
-          mode="outlined"
-        />
-        <TextInput
-          label="Nome"
-          value={nome}
-          onChangeText={text => setNome(text)}
-          style={styles.input}
-          mode="outlined"
-        />
-        <TextInput
-          label="Descrição"
-          value={descricao}
-          onChangeText={text => setDescricao(text)}
-          style={styles.input}
-          mode="outlined"
-        />
-        <TextInput
-          label="Valor"
-          value={valor}
-          onChangeText={text => setValor(text)}
-          style={styles.input}
-          mode="outlined"
-          keyboardType="numeric"
-        />
-        <TextInput
-          label="Tamanho"
-          value={tamanho}
-          onChangeText={text => setTamanho(text)}
-          style={styles.input}
-          mode="outlined"
-        />
+        <View style={styles.formContainer}>
+          <TextInput
+            label="ID"
+            value={id}
+            onChangeText={text => setId(text)}
+            style={styles.input}
+            mode="outlined"
+          />
+          <TextInput
+            label="Nome"
+            value={nome}
+            onChangeText={text => setNome(text)}
+            style={styles.input}
+            mode="outlined"
+          />
+          <TextInput
+            label="Descrição"
+            value={descricao}
+            onChangeText={text => setDescricao(text)}
+            style={styles.input}
+            mode="outlined"
+          />
+          <TextInput
+            label="Valor"
+            value={valor}
+            onChangeText={text => setValor(text)}
+            style={styles.input}
+            mode="outlined"
+            keyboardType="numeric"
+          />
+          <TextInput
+            label="Tamanho"
+            value={tamanho}
+            onChangeText={text => setTamanho(text)}
+            style={styles.input}
+            mode="outlined"
+          />
 
-        <Button
-          mode="contained"
-          onPress={handleSaveProduct}
-          style={styles.button}
-        >
-          Salvar Produto
-        </Button>
+          <Button
+            mode="contained"
+            onPress={handleSaveProduct}
+            style={styles.button}
+          >
+            Salvar Produto
+          </Button>
+        </View>
       </View>
     </View>
   );
